@@ -1,0 +1,715 @@
+Espaço total ocupado: 	"storageSize" : 1117.66796875,
+
+
+Connected successfully!!!
+Execução: 1
+Consulta 1
+Total execution time: 999.00
+700000
+Execução: 2
+Consulta 1
+Total execution time: 989.00
+700000
+Execução: 3
+Consulta 1
+Total execution time: 997.00
+700000
+Execução: 4
+Consulta 1
+Total execution time: 996.00
+700000
+Execução: 5
+Consulta 1
+Total execution time: 988.00
+700000
+Execução: 6
+Consulta 1
+Total execution time: 994.00
+700000
+Execução: 7
+Consulta 1
+Total execution time: 996.00
+700000
+Execução: 8
+Consulta 1
+Total execution time: 992.00
+700000
+Execução: 9
+Consulta 1
+Total execution time: 993.00
+700000
+Execução: 10
+Consulta 1
+Total execution time: 991.00
+700000
+Execução: 1
+Consulta 2
+81
+67500
+Execução: 2
+Consulta 2
+82
+67500
+Execução: 3
+Consulta 2
+80
+67500
+Execução: 4
+Consulta 2
+81
+67500
+Execução: 5
+Consulta 2
+80
+67500
+Execução: 6
+Consulta 2
+82
+67500
+Execução: 7
+Consulta 2
+80
+67500
+Execução: 8
+Consulta 2
+80
+67500
+Execução: 9
+Consulta 2
+80
+67500
+Execução: 10
+Consulta 2
+81
+67500
+Execução: 1
+Consulta 3
+495
+311624
+Execução: 2
+Consulta 3
+496
+311624
+Execução: 3
+Consulta 3
+494
+311624
+Execução: 4
+Consulta 3
+497
+311624
+Execução: 5
+Consulta 3
+496
+311624
+Execução: 6
+Consulta 3
+496
+311624
+Execução: 7
+Consulta 3
+494
+311624
+Execução: 8
+Consulta 3
+496
+311624
+Execução: 9
+Consulta 3
+495
+311624
+Execução: 10
+Consulta 3
+497
+311624
+Execução: 1
+Consulta 4
+389
+62318
+Execução: 2
+Consulta 4
+390
+62318
+Execução: 3
+Consulta 4
+389
+62318
+Execução: 4
+Consulta 4
+388
+62318
+Execução: 5
+Consulta 4
+387
+62318
+Execução: 6
+Consulta 4
+388
+62318
+Execução: 7
+Consulta 4
+390
+62318
+Execução: 8
+Consulta 4
+390
+62318
+Execução: 9
+Consulta 4
+388
+62318
+Execução: 10
+Consulta 4
+388
+62318
+Execução: 1
+Consulta 5
+235
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 2
+Consulta 5
+237
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 3
+Consulta 5
+237
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 4
+Consulta 5
+236
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 5
+Consulta 5
+236
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 6
+Consulta 5
+238
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 7
+Consulta 5
+236
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 8
+Consulta 5
+237
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 9
+Consulta 5
+236
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 10
+Consulta 5
+236
+[" OsFBX5 - F-box domain containing protein, expressed"]
+Execução: 1
+Consulta 7
+389
+62318
+Execução: 2
+Consulta 7
+395
+62318
+Execução: 3
+Consulta 7
+394
+62318
+Execução: 4
+Consulta 7
+392
+62318
+Execução: 5
+Consulta 7
+391
+62318
+Execução: 6
+Consulta 7
+392
+62318
+Execução: 7
+Consulta 7
+392
+62318
+Execução: 8
+Consulta 7
+389
+62318
+Execução: 9
+Consulta 7
+392
+62318
+Execução: 10
+Consulta 7
+395
+62318
+Execução: 1
+Consulta 8
+388
+62318
+Execução: 2
+Consulta 8
+388
+62318
+Execução: 3
+Consulta 8
+391
+62318
+Execução: 4
+Consulta 8
+388
+62318
+Execução: 5
+Consulta 8
+390
+62318
+Execução: 6
+Consulta 8
+388
+62318
+Execução: 7
+Consulta 8
+387
+62318
+Execução: 8
+Consulta 8
+389
+62318
+Execução: 9
+Consulta 8
+388
+62318
+Execução: 10
+Consulta 8
+390
+62318
+Execução: 1
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 957.00
+700000
+Execução: 2
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 957.00
+700000
+Execução: 3
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 957.00
+700000
+Execução: 4
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 959.00
+700000
+Execução: 5
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 958.00
+700000
+Execução: 6
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 955.00
+700000
+Execução: 7
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 959.00
+700000
+Execução: 8
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 952.00
+700000
+Execução: 9
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 962.00
+700000
+Execução: 10
+Consulta 9
+Reference: Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes
+	Chromosome: 1 dna_rm:chromosome chromosome:IRGSP-1.0:1:1:43270923:1 REF
+82248
+	Chromosome: 2 dna_rm:chromosome chromosome:IRGSP-1.0:2:1:35937250:1 REF
+69886
+	Chromosome: 3 dna_rm:chromosome chromosome:IRGSP-1.0:3:1:36413819:1 REF
+67500
+	Chromosome: 4 dna_rm:chromosome chromosome:IRGSP-1.0:4:1:35502694:1 REF
+62651
+	Chromosome: 5 dna_rm:chromosome chromosome:IRGSP-1.0:5:1:29958434:1 REF
+54788
+	Chromosome: 6 dna_rm:chromosome chromosome:IRGSP-1.0:6:1:31248787:1 REF
+57569
+	Chromosome: 7 dna_rm:chromosome chromosome:IRGSP-1.0:7:1:29697621:1 REF
+53534
+	Chromosome: 8 dna_rm:chromosome chromosome:IRGSP-1.0:8:1:28443022:1 REF
+54705
+	Chromosome: 9 dna_rm:chromosome chromosome:IRGSP-1.0:9:1:23012720:1 REF
+43002
+	Chromosome: 10 dna_rm:chromosome chromosome:IRGSP-1.0:10:1:23207287:1 REF
+43570
+	Chromosome: 11 dna_rm:chromosome chromosome:IRGSP-1.0:11:1:29021106:1 REF
+60213
+	Chromosome: 12 dna_rm:chromosome chromosome:IRGSP-1.0:12:1:27531856:1 REF
+50334
+Total execution time: 958.00
+700000
+Execução: 1
+Consulta 10
+Total execution time: 494.00
+311624
+Execução: 2
+Consulta 10
+Total execution time: 495.00
+311624
+Execução: 3
+Consulta 10
+Total execution time: 495.00
+311624
+Execução: 4
+Consulta 10
+Total execution time: 497.00
+311624
+Execução: 5
+Consulta 10
+Total execution time: 494.00
+311624
+Execução: 6
+Consulta 10
+Total execution time: 493.00
+311624
+Execução: 7
+Consulta 10
+Total execution time: 495.00
+311624
+Execução: 8
+Consulta 10
+Total execution time: 495.00
+311624
+Execução: 9
+Consulta 10
+Total execution time: 494.00
+311624
+Execução: 10
+Consulta 10
+Total execution time: 495.00
+311624
+Execução: 1
+Consulta 11
+Total execution time: 81.00
+29828
+Execução: 2
+Consulta 11
+Total execution time: 81.00
+29828
+Execução: 3
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 4
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 5
+Consulta 11
+Total execution time: 81.00
+29828
+Execução: 6
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 7
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 8
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 9
+Consulta 11
+Total execution time: 82.00
+29828
+Execução: 10
+Consulta 11
+Total execution time: 81.00
+29828
+Execução: 1
+Consulta 12
+61
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 2
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 3
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 4
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 5
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 6
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 7
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 8
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 9
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+Execução: 10
+Consulta 12
+0
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" OsFBX5 - F-box domain containing protein, expressed"] rice1
+[" receptor-like kinase, putative, expressed"] rice1
+
