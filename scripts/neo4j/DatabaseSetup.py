@@ -6,8 +6,6 @@ uri = "bolt://localhost:7687"
 
 # Connect to the neo4j database server
 
-graphDB_Driver = GraphDatabase.driver(uri)
-
 #Insert
 variation = "CALL apoc.load.json('dump_mongo_variation') YIELD value AS variation CREATE"\
         "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
@@ -38,12 +36,14 @@ variation_of_population = "match (p:population), (v:variation) where p.id = v.po
 individual_of_population = "match (p:population), (i:individual) where p.id = i.population_id create (i) - [r:individual_of_population]->(p) RETURN type(r);"
 
 def insert_node(node_query):
+    graphDB_Driver = GraphDatabase.driver(uri)
     graphdb_session = graphDB_Driver.session()
     graphdb_session.run(node_query)
     print(graphdb_session.sync())
     graphDB_Driver.close()
 
 def create_relationships(relationship_query):
+    graphDB_Driver = GraphDatabase.driver(uri)
     graphdb_session = graphDB_Driver.session()
     graphdb_session.run(relationship_query)
     print(graphdb_session.sync())
