@@ -27,13 +27,19 @@ individual = "CALL apoc.load.json('dump_mongo_individual') YIELD value AS indivi
 
 
 #Relationships
-chromosome_of_reference = "match (c:chromosome), (re:reference) where re.id = c.reference_id create (c) - [r:chromossome_of_reference]->(re) RETURN type(r);"
+chromosome_to_reference = "match (c:chromosome), (re:reference) where re.id = c.reference_id create (c) - [r:chromossome_to_reference]->(re) RETURN type(r);"
 
-variation_of_chromosome = "match (c:chromosome), (v:variation) where c.id = toInt(v.chrom) create (v) - [r:variation_of_chromosome]->(c) RETURN type(r);"
+reference_to_chromosome = "match (c:chromosome), (re:reference) where re.id = c.reference_id create (re) - [r:reference_to_chromosome]->(c) RETURN type(r);"
 
-variation_of_population = "match (p:population), (v:variation) where p.id = v.population_id create (v) - [r:variation_of_population]->(p) RETURN type(r);"
+variation_to_chromosome = "match (c:chromosome), (v:variation) where c.id = toInt(v.chrom) create (v) - [r:variation_to_chromosome]->(c) RETURN type(r);"
 
-individual_of_population = "match (p:population), (i:individual) where p.id = i.population_id create (i) - [r:individual_of_population]->(p) RETURN type(r);"
+chromosome_to_variation = "match (c:chromosome), (v:variation) where c.id = toInt(v.chrom) create (c) - [r:chromosome_to_variation]->(v) RETURN type(r);"
+
+variation_to_population = "match (p:population), (v:variation) where p.id = v.population_id create (v) - [r:variation_to_population]->(p) RETURN type(r);"
+
+population_to_variation = "match (p:population), (v:variation) where p.id = v.population_id create (p) - [r:population_to_variation]->(v) RETURN type(r);"
+
+individual_to_population = "match (p:population), (i:individual) where p.id = i.population_id create (i) - [r:individual_to_population]->(p) RETURN type(r);"
 
 def insert_node(node_query):
     graphDB_Driver = GraphDatabase.driver(uri)
@@ -49,17 +55,20 @@ def create_relationships(relationship_query):
     print(graphdb_session.sync())
     graphDB_Driver.close()
 
-#Inserts
-insert_node(variation)
-insert_node(chromosome)
-insert_node(population)
-insert_node(reference)
-insert_node(individual)
+# Inserts
+# insert_node(variation)
+# insert_node(chromosome)
+# insert_node(population)
+# insert_node(reference)
+# insert_node(individual)
 
-#Relatioships
-create_relationships(chromosome_of_reference)
-create_relationships(variation_of_chromosome)
-create_relationships(variation_of_population)
-create_relationships(individual_of_population)
+# Relatioships
+# create_relationships(chromosome_to_reference)
+# create_relationships(variation_to_chromosome)
+# create_relationships(variation_to_population)
+# create_relationships(individual_to_population)
+# create_relationships(chromosome_to_variation)
+# create_relationships(reference_to_chromosome)
+create_relationships(population_to_variation)
 
 
