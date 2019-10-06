@@ -48,7 +48,7 @@ for i in range(10):
 for i in range(10):
     print("Execução: " + str(i + 1))
     #9 --
-    consultas.snps_of_a_chromosome_in_a_population_at_each_reference("rice1")
+    consultas.snps_of_each_chromosome_in_a_population("rice1")
 
 for i in range(10):
     print("Execução: " + str(i + 1))

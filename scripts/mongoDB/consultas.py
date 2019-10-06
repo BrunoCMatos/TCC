@@ -218,7 +218,7 @@ def get_individuals_with_annotation(annotation):
     print(db.variation.count(variation_filter_query))
 
 #9
-def snps_of_a_chromosome_in_a_population_at_each_reference(population_id):
+def snps_of_each_chromosome_in_a_population(population_id):
     print("Consulta 9")
 
     reference_projection = {

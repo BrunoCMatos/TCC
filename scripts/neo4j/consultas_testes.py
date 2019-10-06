@@ -41,42 +41,57 @@ uri = "bolt://localhost:7687"
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #5 --
-biologic_annotation = "expressed protein"
-graphDB_Driver = GraphDatabase.driver(uri)
-graphdb_session = graphDB_Driver.session()
-graphdb_session.read_transaction(consultas.get_annotations_related_to_variation, "SNP-1.10006211.")
-graphDB_Driver.close()
-#
-#     #6 remover
-#     #consultas.get_reference_of_individual('IRGC121864@0a12f8f9.0')
+# biologic_annotation = "expressed protein"
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.get_annotations_related_to_variation, "SNP-1.10006211.")
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #7 --
-#     consultas.get_qtd_individuals_with_annotation("expressed protein")
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.get_qtd_individuals_with_annotation, "expressed protein")
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #8 --
-#     consultas.get_individuals_with_annotation("expressed protein")
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.get_individuals_with_annotation, "expressed protein")
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #9 --
-#     consultas.snps_of_a_chromosome_in_a_population_at_each_reference("rice1")
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.snps_of_each_chromosome_in_a_population, "rice1")
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #10 --
-#     consultas.get_annotation_related_to_individual('IRGC121864@0a12f8f9.0')
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.get_annotation_related_to_individual, 'IRGC121864@0a12f8f9.0')
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #11 --
-#     consultas.get_annotations_related_to_chromosome(3)
+# graphDB_Driver = GraphDatabase.driver(uri)
+# graphdb_session = graphDB_Driver.session()
+# graphdb_session.read_transaction(consultas.get_annotations_related_to_chromosome, 3)
+# graphDB_Driver.close()
 #
 # for i in range(10):
 #     print("Execução: " + str(i + 1))
 #     #12 --
-#     positions = ["958179", "10006042", "10007236"]
-#     consultas.get_annotations_related_to_position_and_populations_related_to_them(positions)
+positions = ["958179", "10006042", "10007236"]
+graphDB_Driver = GraphDatabase.driver(uri)
+graphdb_session = graphDB_Driver.session()
+graphdb_session.read_transaction(consultas.get_annotations_related_to_position_and_populations_related_to_them, positions)
+graphDB_Driver.close()

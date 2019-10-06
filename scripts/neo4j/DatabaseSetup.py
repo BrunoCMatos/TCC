@@ -69,6 +69,6 @@ def create_relationships(relationship_query):
 # create_relationships(individual_to_population)
 # create_relationships(chromosome_to_variation)
 # create_relationships(reference_to_chromosome)
-create_relationships(population_to_variation)
+# create_relationships(population_to_variation)
 
 
