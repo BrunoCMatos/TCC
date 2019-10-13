@@ -70,7 +70,6 @@ void GenerateInsertIndividual(int id, char individual_id[], char population_id[]
     strcat(query, ",");
     strcat(query, population_id);
     strcat(query, "\n");
-
     fputs(query, f);
     free(query);
 }
@@ -91,18 +90,8 @@ void GenerateInsertVariations(int variation_id, VCFFields *vcf_fields, char *pop
     strcat(query, (vcf_fields->alt));
     strcat(query, ",.,");
     strcat(query, population_id);
-
+    strcat(query, "\n");
     fputs(query, fV);
-
-    fputs(", \"{", fV);
-    int i;
-    fputs(individuals[0].genotype, fV);
-    for (i = 1; i < n_of_individuals; i++) {
-        fputs(",", fV);
-        fputs(individuals[i].genotype, fV);
-    }
-    fputs("}\"\n", fV);
-
     free(query);
 }
 
@@ -232,7 +221,7 @@ void ProcessSnp(char **snp_lines, Individual *individuals, int n_of_individuals,
 
     char fVName[default_char_array_size];
 
-    strcpy(fVName, "/home/brunocarmonia/Documents/Unifesp/ICBD/csv_files_postgresSQL/variation.csv");
+    strcpy(fVName, "/home/bruno/Documentos/unifesp/tcc/arquivos/postgreSQL/variation_table_input.csv");
 
     FILE *fV = fopen(fVName, "w+");
     FormatFieldMap *format_field_map = (FormatFieldMap*) malloc(sizeof (FormatFieldMap) * file_size);
@@ -273,7 +262,7 @@ void ReadFile(char *fileName, VCFMap *vcf_map, Individual **individuals, char *p
     ProcessHeaderLine(vcf_map, header, individuals, &n_of_individuals);
     int i;
 
-    FILE *f = fopen("/home/brunocarmonia/Documents/Unifesp/ICBD/csv_files_postgresSQL/inserts_individual.csv", "ab+");
+    FILE *f = fopen("/home/bruno/Documentos/unifesp/tcc/arquivos/postgreSQL/individual_table_input.csv", "ab+");
 
     for (i = 0; i < n_of_individuals; i++) {
         GenerateInsertIndividual((*individuals)[i].id, (*individuals)[i].individual_identification, population_id, ".", ".", f);
@@ -303,14 +292,14 @@ void ReadFile(char *fileName, VCFMap *vcf_map, Individual **individuals, char *p
 int main(int argc, char *argv[]) {
   //HDRA-G6-4-RDP1-RDP2-NIAS.AGCT
 
-    char file_path[] = {"/home/brunocarmonia/Documents/Unifesp/ICBD/vcf_files/HDRA-G6-4-RDP1-RDP2-NIAS.AGCT.vcf"};
+    char file_path[] = {"/home/bruno/Documentos/unifesp/tcc/arquivos/commons/HDRA-G6-4-RDP1-RDP2-NIAS.AGCT.vcf"};
     VCFMap vcf_map;
 
     Individual *list_of_individuals;
     char population_id[] = {"rice1"};
     char population_description[] = {"rice"};
 
-    FILE *f = fopen("/home/brunocarmonia/Documents/Unifesp/ICBD/csv_files_postgresSQL/inserts_population.csv", "ab+");
+    FILE *f = fopen("/home/bruno/Documentos/unifesp/tcc/arquivos/postgreSQL/population_table_input.csv", "ab+");
     GenerateInsertPopulation(population_id, population_description, f);
     fclose(f);
 

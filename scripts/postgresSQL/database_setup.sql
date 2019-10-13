@@ -38,7 +38,6 @@ CREATE TABLE VARIATION (
 	alternative_allele char not null,
 	depth varchar (10),
 	population_id varchar(40) not null,
-    genotype varchar(3) ARRAY,
 	PRIMARY KEY (id),
 	FOREIGN KEY (population_id) REFERENCES POPULATION (id)
 );
@@ -64,3 +63,8 @@ CREATE TABLE INDIVIDUAL (
 	PRIMARY KEY (id),
 	FOREIGN KEY (population_id) REFERENCES POPULATION (id)
 );
+
+CREATE INDEX variation_identification_index ON variation (variation_identification);
+CREATE INDEX pos_index ON variation (pos);
+CREATE INDEX chromosome_variation_annotation_index ON chromosome_variation_annotation (chromosome_id, biologic_annotation_id, variation_id);
+CREATE INDEX biologic_annotation_index ON biologic_annotation (annotation);
