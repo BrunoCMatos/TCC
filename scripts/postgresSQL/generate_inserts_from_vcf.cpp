@@ -73,7 +73,7 @@ void GenerateInsertIndividual(int id, char individual_id[], char population_id[]
     fputs(query, f);
     free(query);
 }
-
+variation_line_fields
 void GenerateInsertVariations(int variation_id, VCFFields *vcf_fields, char *population_id, int n_of_individuals, FILE *fV, Individual *individuals) {
     char *query = (char*) malloc(sizeof(char) * default_char_array_size);
 
