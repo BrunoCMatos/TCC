@@ -88,9 +88,9 @@ def get_annotations_related_to_variation(tx, variation_identification):
 
     print(annotations)
 
-# 7
+# 6
 def get_qtd_individuals_with_annotation(tx, biologic_annotation):
-    print("Consulta 7")
+    print("Consulta 6")
 
     query = "MATCH (v:variation) where v.annotations CONTAINS '" + biologic_annotation + "' RETURN  v.variation_identification, v.population_id"
     results = tx.run(query)
@@ -120,7 +120,7 @@ def get_qtd_individuals_with_annotation(tx, biologic_annotation):
 
 # 8
 def get_individuals_with_annotation(tx, biologic_annotation):
-    print("Consulta 8")
+    print("Consulta 7")
 
     query = "MATCH (v:variation) where v.annotations CONTAINS '" + biologic_annotation + "' RETURN  v.variation_identification, v.population_id"
     results = tx.run(query)
@@ -150,7 +150,7 @@ def get_individuals_with_annotation(tx, biologic_annotation):
 
 # 9
 def snps_of_each_chromosome_in_a_population(tx, population_id):
-    print("Consulta 9")
+    print("Consulta 8")
 
     query = "MATCH (c:chromosome) --> (v:variation{population_id: '" + population_id + "'}) RETURN c.id, v.variation_identification ORDER BY c.id"
     results = tx.run(query)
@@ -168,7 +168,7 @@ def snps_of_each_chromosome_in_a_population(tx, population_id):
 
 # 10
 def get_annotation_related_to_individual(tx, individual_indentification):
-    print("Consulta 10")
+    print("Consulta 9")
 
     query = "MATCH (i:individual{individual_identification: '" + individual_indentification + "'}) --> (p:population) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification, v.annotations"
 
@@ -183,7 +183,7 @@ def get_annotation_related_to_individual(tx, individual_indentification):
 
 # 11
 def get_annotations_related_to_chromosome(tx, chromosome_id):
-    print("Consulta 11")
+    print("Consulta 10")
 
     query = "MATCH (c:chromosome{id: " + str(chromosome_id) + "}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification, v.annotations"
 
@@ -198,7 +198,7 @@ def get_annotations_related_to_chromosome(tx, chromosome_id):
 
 # 12
 def get_annotations_related_to_position_and_populations_related_to_them(tx, positions):
-    print("Consulta 12")
+    print("Consulta 11")
 
     query = "MATCH (v:variation) WHERE v.pos IN " + str(positions) + " AND EXISTS (v.annotations) RETURN v.variation_identification, v.annotations, v.population_id"
 

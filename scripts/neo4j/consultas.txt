@@ -1,0 +1,14 @@
+Consulta 1 -- snps_in_a_experiment
+MATCH (chromosome {reference_id: 'Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes'}) --> (variation {population_id: 'rice1'}) RETURN variation.variation_identification
+
+Consulta 2 -- get_all_snps_of_a_chromosome
+MATCH (chromosome{id: 3}) --> (variation) RETURN variation.variation_identification
+
+Consulta 3 -- get_annotations_of_a_population
+MATCH (population{id: 'rice1'}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification
+
+Consulta 4 -- variation_related_to_biologic_annotation_and_individuals_related_to_them
+MATCH (v:variation) where v.annotations CONTAINS ' expressed protein' RETURN  v.variation_identification, v.population_id
+
+Consulta 5 -- variation_related_to_biologic_annotation_and_individuals_related_to_them
+

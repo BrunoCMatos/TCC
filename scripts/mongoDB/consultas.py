@@ -116,48 +116,9 @@ def get_annotations_related_to_variation(variation_identification):
     print(sum)
     print(variation_results[0]["annotations"])
 
-#6 remover
-def get_reference_of_individual(individual_identification):
-    print("Consulta 6")
-    individual_filter_query = {
-        "individual_identification" : individual_identification
-    }
-
-    individual_projection = {
-        "population_id" : 1
-    }
-
-    individual_results = db.individual.find(individual_filter_query, individual_projection)
-    sum = individual_results.explain()["executionStats"]["executionTimeMillis"]
-
-    variation_filter_query = {
-        "population_id" : individual_results[0]["population_id"]
-    }
-
-    variation_projection = {
-        "chrom" : 1
-    }
-
-    variation_results = db.variation.find_one(variation_filter_query, variation_projection)
-
-    chromosome_filter_query = {
-        "id" : int(variation_results["chrom"])
-    }
-
-    chromosome_projection = {
-        "reference_id" : 1
-    }
-
-    chromosome_results = db.chromosome.find(chromosome_filter_query, chromosome_projection)
-    sum += chromosome_results.explain()["executionStats"]["executionTimeMillis"]
-
-    print(chromosome_results[0]["reference_id"])
-    print(sum)
-
-
-#7
+#6
 def get_qtd_individuals_with_annotation(annotation):
-    print("Consulta 7")
+    print("Consulta 6")
 
     variation_filter_query = {
         "annotations" : {"$regex" : annotation}
@@ -186,9 +147,9 @@ def get_qtd_individuals_with_annotation(annotation):
 
     print(db.variation.count(variation_filter_query))
 
-#8
+#7
 def get_individuals_with_annotation(annotation):
-    print("Consulta 8")
+    print("Consulta 7")
 
     variation_filter_query = {
         "annotations": {"$regex": annotation}
@@ -217,9 +178,9 @@ def get_individuals_with_annotation(annotation):
 
     print(db.variation.count(variation_filter_query))
 
-#9
+#8
 def snps_of_each_chromosome_in_a_population(population_id):
-    print("Consulta 9")
+    print("Consulta 8")
 
     reference_projection = {
         "id" : 1
@@ -266,9 +227,9 @@ def snps_of_each_chromosome_in_a_population(population_id):
     print("Total execution time: %.2f" % sum)
     print(quantidade_total)
 
-#10
+#9
 def get_annotation_related_to_individual(individual_indentification):
-    print("Consulta 10")
+    print("Consulta 9")
 
     individual_filter_query = {
         "individual_identification" : individual_indentification
@@ -298,9 +259,9 @@ def get_annotation_related_to_individual(individual_indentification):
     print("Total execution time: %.2f" % sum)
     print(db.variation.count(variation_filter_query))
 
-#11
+#10
 def get_annotations_related_to_chromosome(chromosome_id):
-    print("Consulta 11")
+    print("Consulta 10")
 
     variation_filter_query = {
         "chrom" : str(chromosome_id),
@@ -320,9 +281,9 @@ def get_annotations_related_to_chromosome(chromosome_id):
     print("Total execution time: %.2f" % sum)
     print(db.variation.count(variation_filter_query))
 
-#12
+#11
 def get_annotations_related_to_position_and_populations_related_to_them(positions):
-    print("Consulta 12")
+    print("Consulta 11")
 # { "$in": chromosome_ids}
 
     variation_filter_query = {
