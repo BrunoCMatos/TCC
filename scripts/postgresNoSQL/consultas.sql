@@ -34,7 +34,7 @@ SELECT DISTINCT(i.individual_identification)
 FROM individual i, population p, variation v
 WHERE v.snp_annotation ->>'annotations' LIKE '%expressed protein%' AND v.population_id = p.id AND i.population_id = p.id
 
--- 8 - snps_of_a_chromosome_in_a_population_at_each_reference
+-- 8 - snps_of_a_chromosome_in_a_population
 SELECT r.id as reference, c.id as chromosome, COUNT(DISTINCT v.id) as quantidade
 FROM variation v, chromosome c, reference r
 WHERE v.population_id = 'rice1' AND v.chrom = c.id AND c.reference_id = r.id GROUP BY r.id, c.id

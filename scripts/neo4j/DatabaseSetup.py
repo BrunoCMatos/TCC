@@ -39,7 +39,23 @@ variation_to_population = "match (p:population), (v:variation) where p.id = v.po
 
 population_to_variation = "match (p:population), (v:variation) where p.id = v.population_id create (p) - [r:population_to_variation]->(v) RETURN type(r);"
 
+population_to_individual = "match (p:population), (i:individual) where p.id = i.population_id create (p) - [r:population_to_individual]->(i) RETURN type(r);"
+
 individual_to_population = "match (p:population), (i:individual) where p.id = i.population_id create (i) - [r:individual_to_population]->(p) RETURN type(r);"
+
+
+#Indexes
+index_reference_id = "CREATE INDEX ON :reference(id)"
+index_chromosome_id = "CREATE INDEX ON :chromosome(id)"
+index_chromosome_reference_id = "CREATE INDEX ON :chromosome(reference_id)"
+index_individual_id = "CREATE INDEX ON :individual(id)"
+index_individual_individual_identification = "CREATE INDEX ON :individual(individual_identification)"
+index_population_id = "CREATE INDEX ON :population(id)"
+index_variation_id = "CREATE INDEX ON :variation(id)"
+index_variation_chrom = "CREATE INDEX ON :variation(chrom)"
+index_variation_variation_identification = "CREATE INDEX ON :variation(variation_identification)"
+index_variation_pos = "CREATE INDEX ON :variation(pos)"
+index_variation_annotations = "CREATE INDEX ON :variation(annotations)"
 
 def insert_node(node_query):
     graphDB_Driver = GraphDatabase.driver(uri)

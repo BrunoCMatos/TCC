@@ -82,20 +82,6 @@ def variation_related_to_biologic_annotation_and_individuals_related_to_them(bio
     }
     variation_results = db.variation.find(variation_filter_query, variation_projection)
     sum = variation_results.explain()["executionStats"]["executionTimeMillis"]
-
-    population_ids = list(set([result["population_id"] for result in variation_results]))
-
-    individual_filter_query = {
-        "population_id" : {"$in" : population_ids}
-    }
-
-    individual_projection = {
-        "id" : 1,
-        "individual_identification" : 1
-    }
-
-    individual_results = db.individual.find(individual_filter_query, individual_projection).explain()["executionStats"]["executionTimeMillis"]
-    sum += individual_results
     print(sum)
 
     print(db.variation.count(variation_filter_query))

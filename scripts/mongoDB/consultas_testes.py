@@ -35,7 +35,7 @@ for i in range(10):
 for i in range(10):
     print("Execução: " + str(i + 1))
     #6 --
-    consultas.get_qtd_individuals_with_annotation(" expressed protein")
+    consultas.get_qtd_individuals_with_annotation("expressed protein")
 
 for i in range(10):
     print("Execução: " + str(i + 1))

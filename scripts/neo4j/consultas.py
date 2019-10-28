@@ -118,7 +118,7 @@ def get_qtd_individuals_with_annotation(tx, biologic_annotation):
 
     print(cont)
 
-# 8
+# 7
 def get_individuals_with_annotation(tx, biologic_annotation):
     print("Consulta 7")
 
@@ -148,7 +148,7 @@ def get_individuals_with_annotation(tx, biologic_annotation):
 
     print(cont)
 
-# 9
+# 8
 def snps_of_each_chromosome_in_a_population(tx, population_id):
     print("Consulta 8")
 
@@ -166,7 +166,7 @@ def snps_of_each_chromosome_in_a_population(tx, population_id):
     print(snps_per_chromsome)
 
 
-# 10
+# 9
 def get_annotation_related_to_individual(tx, individual_indentification):
     print("Consulta 9")
 
@@ -181,7 +181,7 @@ def get_annotation_related_to_individual(tx, individual_indentification):
 
     print(cont)
 
-# 11
+# 10
 def get_annotations_related_to_chromosome(tx, chromosome_id):
     print("Consulta 10")
 
@@ -196,7 +196,7 @@ def get_annotations_related_to_chromosome(tx, chromosome_id):
 
     print(cont)
 
-# 12
+# 11
 def get_annotations_related_to_position_and_populations_related_to_them(tx, positions):
     print("Consulta 11")
 
