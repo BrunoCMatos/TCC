@@ -11,7 +11,7 @@ FROM variation v, chromosome_variation_annotation cva, chromosome c
 WHERE (v.id = cva.variation_id AND cva.chromosome_id = c.id AND c.id = 3)
 
 -- 3 - get_annotations_of_a_population
-SELECT  (ba.annotation)
+SELECT  DISTINCT(ba.annotation)
 FROM biologic_annotation ba, variation v, chromosome_variation_annotation cva
 WHERE ba.id = cva.biologic_annotation_id AND cva.variation_id = v.id AND v.population_id = 'rice1'
 

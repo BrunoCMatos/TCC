@@ -7,21 +7,76 @@ uri = "bolt://localhost:7687"
 # Connect to the neo4j database server
 
 #Insert
-variation = "CALL apoc.load.json('dump_mongo_variation') YIELD value AS variation CREATE"\
+variation_chrom_1 = "CALL apoc.load.json('annotations_chrom_1.json') YIELD value AS variation CREATE"\
         "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
         "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
         "annotations:variation.annotations,population_id:variation.population_id});"
 
-chromosome = "CALL apoc.load.json('dump_mongo_chromosome') YIELD value AS chromosome CREATE"\
+variation_chrom_2 = "CALL apoc.load.json('annotations_chrom_2.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_3 = "CALL apoc.load.json('annotations_chrom_3.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_4 = "CALL apoc.load.json('annotations_chrom_4.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_5 = "CALL apoc.load.json('annotations_chrom_5.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_6 = "CALL apoc.load.json('annotations_chrom_6.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_7 = "CALL apoc.load.json('annotations_chrom_7.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_8 = "CALL apoc.load.json('annotations_chrom_8.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_9 = "CALL apoc.load.json('annotations_chrom_9.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_10 = "CALL apoc.load.json('annotations_chrom_10.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_11 = "CALL apoc.load.json('annotations_chrom_11.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+variation_chrom_12 = "CALL apoc.load.json('annotations_chrom_12.json') YIELD value AS variation CREATE"\
+        "(v:variation{id:variation.id,chrom:variation.chrom,variation_identification:variation.variation_identification,"\
+        "pos:variation.pos,reference_allele:variation.reference_allele,alternative_allele:variation.alternative_allele,"\
+        "annotations:variation.annotations,population_id:variation.population_id});"
+
+chromosome = "CALL apoc.load.json('chromosome_table_input.json') YIELD value AS chromosome CREATE"\
         "(c:chromosome{id:chromosome.id,reference_id:chromosome.reference_id,chromosome_description:chromosome.chromosome_description});"
 
-population = "CALL apoc.load.json('dump_mongo_population') YIELD value AS population CREATE"\
+population = "CALL apoc.load.json('population_table_input.json') YIELD value AS population CREATE"\
         "(p:population{id:population.id,experiment:population.experiment});"
 
-reference = "CALL apoc.load.json('dump_mongo_reference') YIELD value AS reference CREATE"\
+reference = "CALL apoc.load.json('reference_table_input.json') YIELD value AS reference CREATE"\
         "(r:reference{id:reference.id,reference_file_address:reference.reference_file_address,associated_paper_address:reference.associated_paper_address});"
 
-individual = "CALL apoc.load.json('dump_mongo_individual') YIELD value AS individual CREATE"\
+individual = "CALL apoc.load.json('individual_table_input.json') YIELD value AS individual CREATE"\
         "(i:individual{id:individual.id,individual_identification:individual.individual_identification,description:individual.description,"\
         "phenotype:individual.phenotype, population_id:individual.population_id});"
 

@@ -62,12 +62,9 @@ def get_annotations_of_a_population(population_id):
         "annotations" : 1
     }
 
-    variation_results = db.variation.find(variation_query_filter, variation_projection).explain()["executionStats"]["executionTimeMillis"]
+    variation_results = db.variation.distinct("annotations", variation_query_filter)
 
-    print(variation_results)
-
-    print(db.variation.count(variation_query_filter))
-
+    print((variation_results))
 
 #4
 def variation_related_to_biologic_annotation_and_individuals_related_to_them(biologic_annotation):
@@ -123,15 +120,10 @@ def get_qtd_individuals_with_annotation(annotation):
         "population_id": {"$in": population_ids}
     }
 
-    individual_projection = {
-        "individual_identification": 1
-    }
-
-    individual_results = db.individual.find(individual_filter_query, individual_projection)
-    sum += individual_results.explain()["executionStats"]["executionTimeMillis"]
+    individual_results = db.individual.count(individual_filter_query)
     print(sum)
 
-    print(db.variation.count(variation_filter_query))
+    print(individual_results)
 
 #7
 def get_individuals_with_annotation(annotation):
@@ -162,7 +154,7 @@ def get_individuals_with_annotation(annotation):
     sum += individual_results.explain()["executionStats"]["executionTimeMillis"]
     print(sum)
 
-    print(db.variation.count(variation_filter_query))
+    print(db.individual.count(individual_filter_query))
 
 #8
 def snps_of_each_chromosome_in_a_population(population_id):
@@ -235,15 +227,10 @@ def get_annotation_related_to_individual(individual_indentification):
         "population_id" : str(individual_results[0]["population_id"])
     }
 
-    variation_projection = {
-        "annotations" : 1
-    }
-
-    variation_results = db.variation.find(variation_filter_query, variation_projection)
-    sum += variation_results.explain()["executionStats"]["executionTimeMillis"]
+    variation_results = db.variation.distinct("annotations", variation_filter_query)
 
     print("Total execution time: %.2f" % sum)
-    print(db.variation.count(variation_filter_query))
+    print((variation_results))
 
 #10
 def get_annotations_related_to_chromosome(chromosome_id):
@@ -255,17 +242,9 @@ def get_annotations_related_to_chromosome(chromosome_id):
             "$exists": "true"
         }
     }
+    variation_results = db.variation.distinct("annotations",  variation_filter_query)
 
-    variation_projection = {
-        "annotations" : 1
-    }
-
-    variation_results = db.variation.find(variation_filter_query, variation_projection)
-
-    sum = variation_results.explain()["executionStats"]["executionTimeMillis"]
-
-    print("Total execution time: %.2f" % sum)
-    print(db.variation.count(variation_filter_query))
+    print(len(variation_results))
 
 #11
 def get_annotations_related_to_position_and_populations_related_to_them(positions):

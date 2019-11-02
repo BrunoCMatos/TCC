@@ -1,5 +1,5 @@
 -- 1 - snps_in_a_experiment
-SELECT DISTINCT v.snp_annotation->>'variation_identification'
+SELECT v.snp_annotation->>'variation_identification'
 FROM variation v
 WHERE v.population_id = 'rice1'
 AND v.chrom IN (SELECT c.id FROM chromosome c WHERE c.reference_id = 'Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes')
@@ -10,12 +10,12 @@ FROM variation v
 WHERE v.chrom = 3
 
 -- 3 - get_annotations_of_a_population
-SELECT v.snp_annotation->>'annotations'
+SELECT DISTINCT(v.snp_annotation->>'annotations')
 FROM variation v
 WHERE v.snp_annotation ? 'annotations' AND v.population_id = 'rice1'
 
 -- 4 - variation_related_to_biologic_annotation
-SELECT DISTINCT v.snp_annotation->>'variation_identification', v.population_id
+SELECT v.snp_annotation->>'variation_identification', v.population_id
 FROM variation v
 WHERE v.snp_annotation ->>'annotations' LIKE '%expressed protein%'
 
@@ -29,7 +29,7 @@ SELECT COUNT(DISTINCT(i.id))
 FROM individual i, population p, variation v
 WHERE v.snp_annotation ->>'annotations' LIKE '%expressed protein%' AND v.population_id = p.id AND i.population_id = p.id
 
--- 7 - get_qtd_individuals_with_annotation
+-- 7 - get_individuals_with_annotation
 SELECT DISTINCT(i.individual_identification)
 FROM individual i, population p, variation v
 WHERE v.snp_annotation ->>'annotations' LIKE '%expressed protein%' AND v.population_id = p.id AND i.population_id = p.id
@@ -40,13 +40,13 @@ FROM variation v, chromosome c, reference r
 WHERE v.population_id = 'rice1' AND v.chrom = c.id AND c.reference_id = r.id GROUP BY r.id, c.id
 
 -- 9 - get_annotations_related_to_individual
-SELECT v.snp_annotation->>'annotations'
+SELECT DISTINCT(v.snp_annotation->>'annotations')
 FROM variation v, population p, individual i
 WHERE v.snp_annotation ? 'annotations' AND i.individual_identification = 'IRGC121864@0a12f8f9.0'
 AND i.population_id = p.id AND p.id = v.population_id
 
 -- 10 - get_annotations_related_to_chromosome
-SELECT v.snp_annotation->>'annotations'
+SELECT DISTINCT(v.snp_annotation->>'annotations')
 FROM variation v
 WHERE v.chrom = 3 AND v.snp_annotation ? 'annotations'
 

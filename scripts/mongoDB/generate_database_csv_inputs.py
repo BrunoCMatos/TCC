@@ -34,7 +34,7 @@ def separate_annotation_by_chromosome(file_path):
 def fill_json(variation, annotations):
     string_annotations = "["
     for annotation in annotations:
-        string_annotations += "\"%s\"," % str(annotation[2])
+        string_annotations += "\"%s\"," % str(annotation)
     string_annotations = string_annotations.replace("\n", "")
     string_annotations = string_annotations[:-1] + "]"
     variation_annotation_json = {
@@ -62,10 +62,10 @@ def func(variations, annotations, current_chrom):
     print("Começando %s, tamanhos-> V: %s, A: %s" % (file_name, len(variations), len(annotations)))
     variations_annotations = []
     for variation in variations:
-        annotations_from_this_variation = []
+        annotations_from_this_variation = set()
         for annotation in annotations:
             if (annotation[0] <= int(variation[3]) and annotation[1] >= int(variation[3])):
-                annotations_from_this_variation.append(annotation)
+                annotations_from_this_variation.add(annotation[2])
         variations_annotations.append(fill_json(variation, annotations_from_this_variation))
 
     print("Persistindo chromossomo " + str(current_chrom))

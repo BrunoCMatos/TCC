@@ -5,6 +5,7 @@ db.genotype.getPlanCache().clear()
 db.chromosome.getPlanCache().clear()
 db.individual.getPlanCache().clear()
 '''
+'''
 for i in range(10):
     print("Execução: " + str(i + 1))
     #1 --
@@ -23,8 +24,8 @@ for i in range(10):
 
 for i in range(10):
     print("Execução: " + str(i + 1))
-    #4 -- estranho
-    biologic_annotation = " expressed protein"
+    #4 --
+    biologic_annotation = "expressed protein"
     consultas.variation_related_to_biologic_annotation_and_individuals_related_to_them(biologic_annotation)
 
 for i in range(10):
@@ -51,14 +52,15 @@ for i in range(10):
     print("Execução: " + str(i + 1))
     #9 --
     consultas.get_annotation_related_to_individual('IRGC121864@0a12f8f9.0')
-
+'''
 for i in range(10):
     print("Execução: " + str(i + 1))
     #10 --
     consultas.get_annotations_related_to_chromosome(3)
-
+'''
 for i in range(10):
     print("Execução: " + str(i + 1))
     #11 --
     positions = ["958179", "10006042", "10007236"]
     consultas.get_annotations_related_to_position_and_populations_related_to_them(positions)
+'''
