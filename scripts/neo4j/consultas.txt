@@ -5,7 +5,7 @@ Consulta 2 -- get_all_snps_of_a_chromosome
 MATCH (chromosome{id: 3}) --> (variation) RETURN variation.variation_identification
 
 Consulta 3 -- get_annotations_of_a_population
-MATCH (population{id: 'rice1'}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification
+MATCH (population{id: 'rice1'}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 Consulta 4 -- variation_related_to_biologic_annotation
 MATCH (v:variation) where v.annotations CONTAINS 'expressed protein' RETURN  v.variation_identification, v.population_id
@@ -13,20 +13,22 @@ MATCH (v:variation) where v.annotations CONTAINS 'expressed protein' RETURN  v.v
 Consulta 5 -- get_annotations_related_to_variation
 MATCH (variation{variation_identification: 'SNP-1.10006211.'}) RETURN variation.annotations
 
-Consulta 6 -- get_qtd_individuals_with_annotation - CORRIGIR
-MATCH (v:variation) --> (p:population) --> (i:individual) WHERE v.annotations  CONTAINS 'expressed protein' RETURN i.individual_identification
+Consulta 6 -- get_qtd_individuals_with_annotation
+MATCH (v:variation) WHERE v.annotations CONTAINS 'expressed protein' MATCH (v) --> (p:population) with distinct(p.id)
+as population_id MATCH (i:individual {population_id:population_id}) return COUNT(i.individual_identification)
 
-Consulta 7 -- get_individuals_with_annotation - CORRIGIR
-MATCH (v:variation) --> (p:population) --> (i:individual) WHERE v.annotations  CONTAINS 'expressed protein' RETURN i.individual_identification
+Consulta 7 -- get_individuals_with_annotation
+MATCH (v:variation) WHERE v.annotations CONTAINS 'expressed protein' MATCH (v) --> (p:population) with distinct(p.id)
+as population_id MATCH (i:individual {population_id:population_id}) return i.individual_identification
 
 CONSULTA 8 -- snps_of_each_chromosome_in_a_population
 MATCH (r:reference) --> (c:chromosome) --> (v:variation{population_id: 'rice1'}) RETURN r.id, c.id, COUNT(v.variation_identification) ORDER BY c.id
 
 CONSULTA 9 -- get_annotation_related_to_individual
-MATCH (i:individual{individual_identification: 'IRGC121864@0a12f8f9.0'}) --> (p:population) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification, v.annotations
+MATCH (i:individual{individual_identification: 'IRGC121864@0a12f8f9.0'}) --> (p:population) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 CONSULTA 10 -- get_annotations_related_to_chromosome
-MATCH (c:chromosome{id: 3}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN v.variation_identification, v.annotations
+MATCH (c:chromosome{id: 3}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 CONSULTA 11 -- get_annotations_related_to_position_and_populations_related_to_them
 MATCH (v:variation) WHERE v.pos IN ["958179", "10006042", "10007236"] AND EXISTS (v.annotations) RETURN v.variation_identification, v.annotations, v.population_id
