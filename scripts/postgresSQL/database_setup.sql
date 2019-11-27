@@ -1,6 +1,6 @@
 
 CREATE TABLE REFERENCE(
-	id varchar (200), -- name of the reference file
+	id varchar (200),
 	reference_file_address varchar(200) not null,
 	associated_paper_address varchar (200),
 	PRIMARY KEY (id)

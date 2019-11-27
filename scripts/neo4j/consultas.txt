@@ -2,10 +2,10 @@ Consulta 1 -- snps_in_a_experiment
 MATCH (chromosome {reference_id: 'Oryza_sativa.IRGSP-1.0.dna_rm.all_chromosomes'}) --> (variation {population_id: 'rice1'}) RETURN variation.variation_identification
 
 Consulta 2 -- get_all_snps_of_a_chromosome
-MATCH (chromosome{id: 3}) --> (variation) RETURN variation.variation_identification
+MATCH (variation{chrom: '3'}) RETURN variation.variation_identification
 
 Consulta 3 -- get_annotations_of_a_population
-MATCH (population{id: 'rice1'}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
+MATCH (v:variation{population_id: 'rice1'}) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 Consulta 4 -- variation_related_to_biologic_annotation
 MATCH (v:variation) where v.annotations CONTAINS 'expressed protein' RETURN  v.variation_identification, v.population_id
@@ -25,10 +25,10 @@ CONSULTA 8 -- snps_of_each_chromosome_in_a_population
 MATCH (r:reference) --> (c:chromosome) --> (v:variation{population_id: 'rice1'}) RETURN r.id, c.id, COUNT(v.variation_identification) ORDER BY c.id
 
 CONSULTA 9 -- get_annotation_related_to_individual
-MATCH (i:individual{individual_identification: 'IRGC121864@0a12f8f9.0'}) --> (p:population) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
+MATCH (i:individual{individual_identification: 'IRGC121864@0a12f8f9.0'}) --> (p:population) with distinct(p.id) as population_id MATCH (v:variation {population_id:population_id}) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 CONSULTA 10 -- get_annotations_related_to_chromosome
-MATCH (c:chromosome{id: 3}) --> (v:variation) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
+MATCH (v:variation{chrom: '3'}) WHERE EXISTS (v.annotations) RETURN DISTINCT(v.annotations)
 
 CONSULTA 11 -- get_annotations_related_to_position_and_populations_related_to_them
 MATCH (v:variation) WHERE v.pos IN ["958179", "10006042", "10007236"] AND EXISTS (v.annotations) RETURN v.variation_identification, v.annotations, v.population_id

@@ -101,11 +101,15 @@ individual_to_population = "match (p:population), (i:individual) where p.id = i.
 
 #Indexes
 index_reference_id = "CREATE INDEX ON :reference(id)"
+
 index_chromosome_id = "CREATE INDEX ON :chromosome(id)"
 index_chromosome_reference_id = "CREATE INDEX ON :chromosome(reference_id)"
+
 index_individual_id = "CREATE INDEX ON :individual(id)"
 index_individual_individual_identification = "CREATE INDEX ON :individual(individual_identification)"
+
 index_population_id = "CREATE INDEX ON :population(id)"
+
 index_variation_id = "CREATE INDEX ON :variation(id)"
 index_variation_chrom = "CREATE INDEX ON :variation(chrom)"
 index_variation_variation_identification = "CREATE INDEX ON :variation(variation_identification)"
